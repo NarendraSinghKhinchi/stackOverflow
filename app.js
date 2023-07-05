@@ -19,9 +19,14 @@ app.use(bodyParser.json())
 
 const mongoDB = `mongodb+srv://NarendraSinghKhinchi:${process.env.MONGO_KEY}@cluster0.vgb35ac.mongodb.net/?retryWrites=true&w=majority` ;
 async function main(){
-    await mongoose.connect(mongoDB);
+    try{
+        await mongoose.connect(mongoDB);
+        console.log("connection to database successful");
+    }catch(err){
+        console.log("error occured while connecting to monogodb" ,err);
+    }
 }
-main().catch((err) => console.log(err));
+
 
 const corsOptions = {
     origin:'http://localhost:3000'
