@@ -26,7 +26,7 @@ async function main(){
         console.log("error occured while connecting to monogodb" ,err);
     }
 }
-
+main();
 
 const corsOptions = {
     origin:'http://localhost:3000'
