@@ -9,7 +9,7 @@ const mongoose = require("mongoose") ;
 const indexRouter = require('./routes/index');
 const userRouter = require("./routes/userRoute");
 
-const port = 4000 ;
+const port = process.env.PORT || 4000 ;
 const app = express();
 
 // parse application/x-www-form-urlencoded
@@ -37,7 +37,7 @@ app.use("/",indexRouter);
 app.use("/user",userRouter);
 
 app.listen(port, ()=>{
-    console.log("server is running on port 4000");
+    console.log("server is running on port ", port);
 })
 
 //error handler
