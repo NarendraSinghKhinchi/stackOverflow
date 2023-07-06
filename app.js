@@ -29,7 +29,7 @@ async function main(){
 main();
 
 const corsOptions = {
-    origin:['http://localhost:3000' , 'https://stackoverflowclone-xr0h.onrender.com/']
+    origin:['http://localhost:3000' , 'https://stackoverflowclone-xr0h.onrender.com']
 }
 app.use(cors(corsOptions));
 app.use("/",indexRouter);
