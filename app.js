@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-const mongoDB = `mongodb+srv://NarendraSinghKhinchi:${process.env.MONGO_KEY}@cluster0.vgb35ac.mongodb.net/?retryWrites=true&w=majority` ;
+const mongoDB = `mongodb+srv://developer:${process.env.MONGO_KEY}@cluster0.vgb35ac.mongodb.net/stack?retryWrites=true&w=majority` ;
 async function main(){
     try{
         await mongoose.connect(mongoDB);
